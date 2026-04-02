@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice AI</title>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:50px;">
+
+  <h1>🚀 النظام شغال</h1>
+  <button onclick="test()">اختبار</button>
+
+  <script>
+    async function test() {
+      const res = await fetch("https://REPLACE_WITH_RENDER_LINK/extract", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ base64: "test" })
+      });
+
+      const data = await res.json();
+      alert(JSON.stringify(data));
+    }
+  </script>
+
+</body>
+</html>
